@@ -42,7 +42,7 @@
                                 <items>
                                     <barButtonItem systemItem="bookmarks" id="XKL-gf-jlc">
                                         <connections>
-                                            <segue destination="u7E-ca-8Kx" kind="presentation" identifier="seipeMemo" id="vyJ-Xn-g5K"/>
+                                            <segue destination="u7E-ca-8Kx" kind="presentation" identifier="swipeMemo" id="vyJ-Xn-g5K"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iRW-Li-Xa8"/>

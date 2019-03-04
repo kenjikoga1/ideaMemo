@@ -10,14 +10,14 @@ import UIKit
 
 class SwipeViewController: UIViewController {
     
-    var memos = [String]()
+    var addMemos = [String]()
 
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(memos)
+        print(addMemos)
     }
     
 
