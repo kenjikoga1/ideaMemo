@@ -67,7 +67,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             mv.memo = memos[(tableView.indexPathForSelectedRow?.row)!]
         }else if segue.identifier == "swipeMemo"{
             let sm = segue.destination as! SwipeViewController
-            sm.memos = sender as! [String]
+            sm.memos.append(contentsOf: self.memos)
         }
     }
     
