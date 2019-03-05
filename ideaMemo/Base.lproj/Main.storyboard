@@ -79,15 +79,19 @@
                                 <rect key="frame" x="16" y="81" width="343" height="409"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IA4-kX-zaN">
-                                        <rect key="frame" x="8" y="8" width="327" height="393"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6r-pZ-3v2">
+                                        <rect key="frame" x="8" y="57" width="327" height="295"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wx1-3V-2qN" appends="YES" id="Cfg-jf-AUV"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUc-HU-kAu">
                                 <rect key="frame" x="78" y="528" width="80" height="80"/>
@@ -97,6 +101,9 @@
                                 <state key="normal" title="◀">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="u7E-ca-8Kx" eventType="touchUpInside" id="bKB-Q3-f1N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mst-H5-oAU">
                                 <rect key="frame" x="217" y="528" width="80" height="80"/>
@@ -106,18 +113,28 @@
                                 <state key="normal" title="▶">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forwardButton:" destination="u7E-ca-8Kx" eventType="touchUpInside" id="vJT-yN-jV9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7u9-cK-qJQ"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="IA4-kX-zaN" id="DTs-it-126"/>
+                        <outlet property="back" destination="RUc-HU-kAu" id="B8L-CC-sC1"/>
+                        <outlet property="backCard" destination="3N5-n1-fvh" id="tKo-Dk-APo"/>
+                        <outlet property="memoTextLabel" destination="i6r-pZ-3v2" id="SCq-Wa-kbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3M-H9-P6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Wx1-3V-2qN">
+                    <connections>
+                        <action selector="swipeCard:" destination="u7E-ca-8Kx" id="8RF-bu-xjQ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1001" y="889"/>
+            <point key="canvasLocation" x="-1002.4" y="888.30584707646187"/>
         </scene>
         <!--EditMemo-->
         <scene sceneID="y6m-aG-E1n">

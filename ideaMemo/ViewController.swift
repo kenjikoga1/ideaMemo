@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var tableView: UITableView!
     let userDefaults = UserDefaults.standard
     
-    var memos = ["こんにちは", "goodbye", "さようなら"]
+    var memos = ["0", "1", "2", "3", "4", "5", "6"]
     
     @IBAction func unwindToMemo(sender:UIStoryboardSegue){
         guard let sourceMV = sender.source as? MemoViewController, let memo = sourceMV.memo else {
@@ -68,7 +68,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         }
         if segue.identifier == "swipeMemo"{
             let sm = segue.destination as! SwipeViewController
-            sm.addMemos.append(contentsOf: self.memos)
+            sm.addMemos += self.memos
         }
     }
     
